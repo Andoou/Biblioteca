@@ -5,26 +5,31 @@
  *      Author: yeison
  */
 
-#include <Persona.h>
-#include <iostream>_
-#include <string.h>
-using std::string;
+#include "Persona.h"
+#include <iostream>
+#include "string.h"
 
 Persona::Persona(){
 	nombres = "";
 	apellidos = "";
 	correo = "";
-	telefono = {0,0,0,0,0,0,0,0,0};
-	dni = {0,0,0,0,0,0,0,0};
 	direccion = "";
+	telefono = NULL;
+	dni = NULL;
 }
 
 Persona::Persona(string nom, string ape, string cor, int tel[9], int dn[8], string dir){
 	nombres = nom;
 	apellidos = ape;
 	correo = cor;
-	telefono = tel;
-	dni = dn;
+	telefono = new int[9];
+	for(int i = 0; i < 9; i++){
+		telefono[i] = tel[i];
+	}
+	dni = new int[8];
+	for(int i = 0; i < 8; i++){
+		dni[i] = dn[i];
+	}
 	direccion = dir;
 }
 string Persona::getNombres(){
@@ -44,6 +49,14 @@ int* Persona::getDNi(){
 }
 string Persona::getDireccion(){
 	return direccion;
+}
+void Persona::toString(){
+	cout << "---Datos---\n"<<"Nombres: "<< nombres <<"\n"<<
+			"Apellidos: "<<apellidos << "\n"<<
+			"Dni: "<<dni << "\n"<<
+			"Correo: "<< correo << "\n"<<
+			"Telefono: "<< telefono << "\n"<<
+			"Direccion: "<< direccion <<endl;
 }
 Persona::~Persona(){
 	delete []dni;

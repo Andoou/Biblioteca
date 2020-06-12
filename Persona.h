@@ -8,12 +8,13 @@
 
 #ifndef PERSONA_H_
 #define PERSONA_H
-#include <iostream>_
-#include <string.h>
-using std::string;
+
+#include "string.h"
+#include <iostream>
+using namespace std;
 
 class Persona{
-private:
+protected:
 	string nombres;
 	string apellidos;
 	string correo;
@@ -29,6 +30,7 @@ public:
 	int* getTelefono();
 	int* getDNi();
 	string getDireccion();
+	void toString();
 	~Persona();
 };
 
