@@ -53,10 +53,14 @@ string Persona::getDireccion(){
 void Persona::toString(){
 	cout << "---Datos---\n"<<"Nombres: "<< nombres <<"\n"<<
 			"Apellidos: "<<apellidos << "\n"<<
-			"Dni: "<<dni << "\n"<<
-			"Correo: "<< correo << "\n"<<
-			"Telefono: "<< telefono << "\n"<<
-			"Direccion: "<< direccion <<endl;
+			"Dni: ";
+			for(int i = 0; i < 8; i++){cout << dni[i];};
+			cout << "\n";
+			cout << "Correo: "<< correo << "\n"<<
+			"Telefono: ";
+			for(int i = 0; i < 9; i++){cout << telefono[i];};
+			cout << "\n";
+			cout << "Direccion: "<< direccion <<endl;
 }
 Persona::~Persona(){
 	delete []dni;

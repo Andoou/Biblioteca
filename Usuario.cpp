@@ -10,17 +10,17 @@ Usuario::Usuario(){
 	estado = 1;
 	codigo = NULL;
 }
-Usuario::Usuario(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4]){
+Usuario::Usuario(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4]):Persona(nom, ape, cor, tel, dn, dir){
 	codigo = new char[4];
-	for(int i = 0; i < 4; i++){
-		codigo[i] = cod[i];
-	}
+	strcpy(cod, codigo);
 	estado = 1;
 }
 void Usuario::toString(){
-	toString();
-	cout << "Codigo de usuario: "<< codigo <<"\n"
-		<<	"Estado: "<< estado << endl ;
+	Persona::toString();
+	cout << "Codigo de usuario: ";
+	for(int i = 0; i < 4; i++){cout << codigo[i];};
+	cout << "\n";
+	cout <<	"Estado: "<< estado << endl ;
 }
 /*
 Usuario::Usuario(string nom, string ape){
