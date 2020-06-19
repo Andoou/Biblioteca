@@ -15,7 +15,7 @@ private:
 	char *PassAdmin;
 public:
 	Administrador();
-	Administrador(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4]);
+	Administrador(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4], char pas[8]);
 	//	Usuario(string nombre, string apellido);
 	void toString();
 };
