@@ -11,11 +11,11 @@
 
 class Usuario:Persona{
 private:
-	char *codigo;
+	string editorial;
 	bool estado;
 public:
 	Usuario();
-	Usuario(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4]);
+	Usuario(string nom, string ape, string cor, string tel, string dn, string dir, string cod);
 //	Usuario(string nombre, string apellido);
 	void toString();
 };
