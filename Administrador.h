@@ -7,7 +7,7 @@
 
 #ifndef USUARIO_H_
 #define USUARIO_H_
-#include "Persona.h"
+#include "Persona.cpp"
 
 class Administrador:Persona{
 private:
@@ -16,7 +16,8 @@ private:
 public:
 	Administrador();
 	Administrador(string nom, string ape, string cor, int tel[9], int dn[8], string dir, char cod[4], char pas[8]);
-	//	Usuario(string nombre, string apellido);
+	void crearAdministrador();
+	void verAdministradores();
 	void toString();
 };
 
