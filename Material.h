@@ -1,23 +1,24 @@
 
-# ifndef MATERIAL_H_
-# define  MATERIAL_H
-# include  < iostream > _
-# include  < string.h >
-using std :: string;
-clase  Material {
-	privado:
-		int * codigo;
+#ifndef MATERIAL_H
+#define MATERIAL_H
+#include <iostream>
+#include <string>
+using namespace std;
+class Material{
+private:
+	string codigo;
 	string autor;
 	string titulo;
 	int anio;
 	bool estado;
-	
 public:
 	Material();
-	Material(int codigo[5], string autor, string titulo, string anio, string estado)
-		int getCodigo();
+	Material(string cod, string aut, string tit, int anio, bool estado);
+	string getCodigo();
 	string getAutor();
 	string getTitulo();
 	int getAnio();
 	bool getEstado();
 };
+#include "Material.cpp"
+#endif

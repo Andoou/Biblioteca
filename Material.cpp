@@ -1,35 +1,34 @@
-# include  <Material.h>
-# include  < iostream > _
-# include  < string.h >
-using std :: string;
-
-Material :: Material () {
-	codigo = { 0 , 0 , 0 , 0 , 0 };
-	autor = " " ;
-	titulo = " " ;
-	anio= 0;
-	estado = false
+#include "Material.h"
+#include <iostream>
+#include <string>
+using namespace std;
+Material::Material(){
+	codigo="";
+	autor="";
+	titulo="";
+	anio=0000;
+	estado=false;
 }
 
-Material :: Material (int cod [5], string aut, string tit, int an, bool est) {
+Material::Material(string cod, string aut, string tit, int an, bool est){
 	codigo = cod;
 	autor = aut ;
 	titulo = tit ;
 	anio= an;
-	estado = est
+	estado = est;
 }
-int * Material :: getCodigo () {
+string Material::getCodigo(){
 	return codigo;
 }
-string Material :: getAutor () {
-	regresar autor;
+string Material::getAutor(){
+	return autor;
 }
-string Material :: getTitulo () {
-	devolver titulo;
+string Material::getTitulo(){
+	return titulo;
 }
-int Material :: getAnio () {
+int Material::getAnio(){
 	return anio;
 }
-bool Material :: getEstado () {
+bool Material::getEstado(){
 	return estado;
 }
